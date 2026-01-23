@@ -1,0 +1,6 @@
+Mi Alias es: ArkanoDev
+Mi nombre es: Victor Jhona
+Mi Apellido es: Rodriguez
+Mi edad es: 22 años
+Mi lenguaje preferido es: Python
+Aunque tambien me gusta SQL
