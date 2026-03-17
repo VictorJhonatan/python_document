@@ -46,6 +46,7 @@ debes activarlo para empezar a usarlo.
 - En Windows:
   ```bash
   .\venv\Scripts\activate
+  .venv\Scripts\activate (para entornos virtuales creados con el nombre .venv)
   ```"""
 
 """ ¿Qué sucede si no activas el entorno virtual?

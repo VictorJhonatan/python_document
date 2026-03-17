@@ -9,9 +9,21 @@ app = FastAPI()
 async def root():
     return "Hola desde main:---> FastAPI--ARKANO1q"
 
-@app.get("/url") 
+@app.get("/url")  #@ es un decorador - app.get es el metodo get y la ruta /url
 async def root():
     return {"url_curso": "http://arknodev.com/python"}
+
+@app.get("/info")
+async def obtener_info():
+    return {"nombre": "API de Cursos", 
+            "version": "1.0", 
+            "estado": "activo"}
+
+## url locales, hacemos peticiones get
+## iniciar servidor:  uvicorn main:app --reload
+### detener servidor: ctrl + c
+
+
 
 # {"dateils": "Not Found"} - cuando no encuentra la ruta
 # 404 - cuando no encuentra la ruta
@@ -82,5 +94,56 @@ put: es para actualizar datos
 delete: es para eliminar datos
 y ver las respuestas de la API directamente desde el navegador.
 Esto facilita mucho el desarrollo y la prueba de APIs,"""
+
+
+"""ENDPOINTS:
+
+Un endpoint es básicamente una dirección específica en tu API donde puedes hacer peticiones.
+Piénsalo como las "puertas" de tu aplicación:
+
+"/url" es un endpoint
+"/info" es otro endpoint
+"/usuarios" sería otro más
+
+Cada endpoint tiene:
+
+Una ruta (ejemplo: /info)
+Un método (GET, POST, PUT, DELETE)
+Una función que responde con datos
+"""
+
+"""
+ http://127.0.0.1:8000/docs ----> crea documentacion automatica de la API,
+ donde puedes ver todos los endpoints
+ y probarlos directamente desde el navegador,
+ además de ver la estructura de las respuestas
+ y los parámetros que aceptan."""
+
+""" http://127.0.0.1:8000/redoc ----> otra interfaz de documentación
+ para la API generada automáticamente,
+ pero con un estilo diferente a /docs.
+ ReDoc ofrece una presentación más detallada y estructurada
+ de la documentación de la API, facilitando la comprensión
+ de los endpoints, parámetros y respuestas.
+ Es útil para desarrolladores que prefieren una vista más detallada
+ y organizada de la documentación de la API."""
+
+# --------------------------------------------------------------------
+
+"""Usamos postman para hacer peticiones HTTP como GET, POST, PUT, DELETE
+y ver las respuestas de la API de manera visual.
+Postman es una herramienta muy útil para probar y desarrollar APIs,
+ya que permite crear y guardar peticiones, organizar colecciones"""
+
+"""instalamos la extension plaguins en este caso usaremos thunder client
+para hacer peticiones HTTP directamente desde el editor de codigo VSCode
+sin necesidad de usar herramientas externas como Postman."""
+
+
+""" El @app.get("/") cuenta API 
+rápida que la función que se 
+encuentra a continuación se 
+encarga de manejar las 
+solicitudes que van a:"""
 
 
